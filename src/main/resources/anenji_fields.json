@@ -1,0 +1,730 @@
+[
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 100,
+    "registerLength": 2,
+    "propertyFieldList": [
+      {
+        "fieldName": "error_code",
+        "fieldType": "U32_BIG_ENDIAN",
+        "expression": "value",
+        "length": 4,
+        "note": "Fault Code"
+      }
+    ],
+    "name": "error_code",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 108,
+    "registerLength": 2,
+    "propertyFieldList": [
+      {
+        "fieldName": "warning_code",
+        "fieldType": "U32_BIG_ENDIAN",
+        "expression": "value",
+        "length": 4,
+        "note": "Warning code"
+      }
+    ],
+    "name": "warning_code",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 186,
+    "registerLength": 12,
+    "propertyFieldList": [
+      {
+        "fieldName": "device_id",
+        "fieldType": "STRING",
+        "expression": "value",
+        "length": 14,
+        "note": "Serial number STRING"
+      }
+    ],
+    "name": "device_id",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 201,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "operation_mode",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Working Mode"
+      }
+    ],
+    "name": "operation_mode",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 202,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "gridvoltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Effective mains voltage",
+        "unit": "V"
+      }
+    ],
+    "name": "gridvoltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 203,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "gridfrequency",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.01",
+        "length": 2,
+        "note": "Mains Frequency",
+        "unit": "Hz"
+      }
+    ],
+    "name": "gridfrequency",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 204,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "mainpower",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Average mains Power",
+        "unit": "W"
+      }
+    ],
+    "name": "mainpower",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 205,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Effective inverter voltage",
+        "unit": "V"
+      }
+    ],
+    "name": "inverter_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 206,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_current",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Effective inverter current",
+        "unit": "A"
+      }
+    ],
+    "name": "inverter_current",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 207,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_frequency",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.01",
+        "length": 2,
+        "note": "Inverter frequency",
+        "unit": "Hz"
+      }
+    ],
+    "name": "inverter_frequency",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 208,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_power",
+        "fieldType": "I16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Average inverter power",
+        "unit": "W"
+      }
+    ],
+    "name": "inverter_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 209,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_charging_power",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Inverter charging power\t",
+        "unit": "W"
+      }
+    ],
+    "name": "inverter_charging_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 210,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_effective_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "AC output voltage",
+        "unit": "V"
+      }
+    ],
+    "name": "output_effective_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 211,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_effective_current",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Output effective Current",
+        "unit": "A"
+      }
+    ],
+    "name": "output_effective_current",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 212,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_frequency",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.01",
+        "length": 2,
+        "note": "AC output frequency",
+        "unit": "Hz"
+      }
+    ],
+    "name": "output_frequency",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 213,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_active_power",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "AC_Wirkleistung",
+        "unit": "W"
+      }
+    ],
+    "name": "output_active_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 214,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_apparent_power",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "AC_Scheinleistung",
+        "unit": "VA"
+      }
+    ],
+    "name": "output_apparent_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 215,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_average_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Batteriespannung",
+        "unit": "V"
+      }
+    ],
+    "name": "battery_average_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 216,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_average_current",
+        "fieldType": "I16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Batterieladestrom R216 oder R232",
+        "unit": "A"
+      }
+    ],
+    "name": "battery_average_current",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 217,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_average_power",
+        "fieldType": "I16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Batterie_Leistung",
+        "unit": "W"
+      }
+    ],
+    "name": "battery_average_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 219,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "pv_average_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Solarspannung",
+        "unit": "V"
+      }
+    ],
+    "name": "pv_average_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 220,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "pv_average_current",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Solarstrom",
+        "unit": "A"
+      }
+    ],
+    "name": "pv_average_current",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 223,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "pv_average_power",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "PV_Ladeleistung",
+        "unit": "W"
+      }
+    ],
+    "name": "pv_average_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 224,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "pv_charging_average_power",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "PV_ladeleistung1",
+        "unit": "W"
+      }
+    ],
+    "name": "pv_charging_average_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 225,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_load_percent",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Ausgangslast",
+        "unit": "%"
+      }
+    ],
+    "name": "output_load_percent",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 226,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "dcdc_temperature",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "DCDC Temperature",
+        "unit": "C"
+      }
+    ],
+    "name": "dcdc_temperature",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 227,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_temperature",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Inverter heat sink temperature",
+        "unit": "C"
+      }
+    ],
+    "name": "inverter_temperature",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 229,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_state_of_charge",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "SOC Battery capacity",
+        "unit": "%"
+      }
+    ],
+    "name": "battery_state_of_charge",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 233,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "inverter_charging_average_current",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Inverter charging average current",
+        "unit": "A"
+      }
+    ],
+    "name": "inverter_charging_average_current",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 234,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "pv_charging_average_current",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "PV charging average current",
+        "unit": "A"
+      }
+    ],
+    "name": "pv_charging_average_current",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 300,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_mode",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2
+      }
+    ],
+    "name": "output_mode",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 301,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "output_source_priority",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "output_source_priority"
+      }
+    ],
+    "name": "output_source_priority",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 324,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_bulk_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Max charging voltage",
+        "unit": "V"
+      }
+    ],
+    "name": "battery_bulk_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 325,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_float_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Battery float voltage",
+        "unit": "V"
+      }
+    ],
+    "name": "battery_float_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 326,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_redischarge_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Battery discharge recovery point in mains mode\t",
+        "unit": "V"
+      }
+    ],
+    "name": "battery_redischarge_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 327,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_recharge_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Battery low voltage protection point in mains mod",
+        "unit": "V"
+      }
+    ],
+    "name": "battery_recharge_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 329,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_under_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Battery low voltage protection point in off-grid mode",
+        "unit": "V"
+      }
+    ],
+    "name": "battery_under_voltage",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 331,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_charging_priority",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Battery charging priority\t"
+      }
+    ],
+    "name": "battery_charging_priority",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 332,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "current_max_charging",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2,
+        "note": "Maximum mains charging current\t",
+        "unit": "A"
+      }
+    ],
+    "name": "current_max_charging",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 333,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "current_max_ac_charging",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.1",
+        "length": 2
+      }
+    ],
+    "name": "current_max_ac_charging",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 626,
+    "registerLength": 16,
+    "propertyFieldList": [
+      {
+        "fieldName": "firmware",
+        "fieldType": "STRING",
+        "expression": "value",
+        "length": 24
+      }
+    ],
+    "name": "firmware",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "registerType": "HOLDING_REGISTER",
+    "offset": 643,
+    "registerLength": 1,
+    "propertyFieldList": [
+      {
+        "fieldName": "ac_output_rating_active_power",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "length": 2,
+        "note": "Rated Power",
+        "unit": "W"
+      }
+    ],
+    "name": "ac_output_rating_active_power",
+    "providerPropertyType": "MODBUS"
+  },
+  {
+    "propertyFieldList": [
+      {
+        "fieldName": "battery_charge_current",
+        "expression": "IF(battery_average_current < 0, 0, ABS(battery_average_current))"
+      },
+      {
+        "fieldName": "battery_discharge_current",
+        "expression": "IF(battery_average_current < 0, ABS(battery_average_current), 0)"
+      },
+      {
+        "fieldName": "battery_charging_power",
+        "expression": "battery_charge_current * battery_average_voltage"
+      },
+      {
+        "fieldName": "battery_discharging_power",
+        "expression": "battery_discharge_current * battery_average_voltage"
+      },
+      {
+        "fieldName": "error_text",
+        "expression": "SWITCH(error_code, 0, \"\",1, \"Over temperature of inverter module\",2, \"Over temperature of DCDC module\",3, \"Battery over voltage\",4, \"Over temperature of PV module\",5, \"Output short circuited\",6, \"Over Inverter voltage\",7, \"Output over load\",8, \"Bus over voltage\",9, \"Bus soft start times out\",10, \"PV over current\",11, \"PV over voltage\",12, \"Battery over current\",13, \"Inverter over current\",14, \"Bus low voltage\",15, \"Reserve\",16, \"Inverter DC component is too high\",17, \"Reserve\",18, \"The zero bias of Output current is too large\",19, \"The zero bias of inverter current is too large\",20, \"The zero bias of battery current is too large\",21, \"The zero bias of PV current is too large\",22, \"Inverter low voltage\",23, \"Inverter negative power protection\",24, \"The host in the parallel system is lost\",25, \"Synchronization signal abnormal in the parallel system\",26, \"The battery type is incompatible\",27, \"Parallel versions are incompatible\",\"Unknown fault code \" + error_code)"
+      }
+    ],
+    "name": "Zusatzberechnungen",
+    "providerPropertyType": "SIMPLE"
+  }
+]

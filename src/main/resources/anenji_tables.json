@@ -1,0 +1,399 @@
+[
+  {
+    "columns": [
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Frequenz",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Wirkleistung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Scheinleistung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Ausgangslast",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Strom",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "output_effective_voltage"
+          },
+          {
+            "expression": "output_frequency"
+          },
+          {
+            "expression": "output_active_power"
+          },
+          {
+            "expression": "output_apparent_power"
+          },
+          {
+            "expression": "output_load_percent"
+          },
+          {
+            "expression": "output_effective_current"
+          }
+        ]
+      }
+    ],
+    "tableName": "AC"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Leistung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Strom",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Leistung_Laden",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Strom_Laden",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "pv_average_power"
+          },
+          {
+            "expression": "pv_average_voltage"
+          },
+          {
+            "expression": "pv_average_current"
+          },
+          {
+            "expression": "pv_charging_average_power"
+          },
+          {
+            "expression": "pv_charging_average_current"
+          }
+        ]
+      }
+    ],
+    "tableName": "PV"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Kapazitaet",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "BatteryFloat",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "BatteryBulk",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "VoltBackPV",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "VoltBackUtil",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "BatteryDown",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Strom",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Entladestrom",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Ladestrom",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "battery_average_voltage"
+          },
+          {
+            "expression": "battery_state_of_charge"
+          },
+          {
+            "expression": "battery_float_voltage"
+          },
+          {
+            "expression": "battery_bulk_voltage"
+          },
+          {
+            "expression": "battery_redischarge_voltage"
+          },
+          {
+            "expression": "battery_recharge_voltage"
+          },
+          {
+            "expression": "battery_under_voltage"
+          },
+          {
+            "expression": "battery_average_current"
+          },
+          {
+            "expression": "battery_discharge_current"
+          },
+          {
+            "expression": "battery_charge_current"
+          }
+        ]
+      }
+    ],
+    "tableName": "Batterie"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Temperatur",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Device_Status",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Ladestatus",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Output",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Temperatur_DC",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Fehlercode",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Warningcode",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "inverter_temperature"
+          },
+          {
+            "expression": "operation_mode"
+          },
+          {
+            "expression": "battery_charging_priority"
+          },
+          {
+            "expression": "output_source_priority"
+          },
+          {
+            "expression": "dcdc_temperature"
+          },
+          {
+            "expression": "error_code"
+          },
+          {
+            "expression": "warning_code"
+          }
+        ]
+      }
+    ],
+    "tableName": "Service"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Frequenz",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Leistung",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "gridvoltage"
+          },
+          {
+            "expression": "gridfrequency"
+          },
+          {
+            "expression": "mainpower"
+          }
+        ]
+      }
+    ],
+    "tableName": "Netz"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Firmware",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Produkt",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Serial",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Datum",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Max_AC_Wirkleistung",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Max_PV_Ladung",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Max_AC_Ladung",
+        "columnType": "STRING",
+        "preCondition": ""
+      },
+      {
+        "columnName": "Objekt",
+        "columnType": "STRING",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "firmware"
+          },
+          {
+            "expression": "\"ANENJI\""
+          },
+          {
+            "expression": "device_id"
+          },
+          {
+            "expression": "DT_DATE_FORMAT(CURRENT, \"dd.MM.yyyy\")"
+          },
+          {
+            "expression": "ac_output_rating_active_power"
+          },
+          {
+            "expression": "current_max_charging"
+          },
+          {
+            "expression": "current_max_ac_charging"
+          },
+          {
+            "expression": "PROVIDER_NAME"
+          }
+        ]
+      }
+    ],
+    "tableName": "Info"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Wh_Heute",
+        "columnType": "NUMBER",
+        "preCondition": ""
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "Tagesenergie"
+          }
+        ]
+      }
+    ],
+    "tableName": "Summen"
+  }
+]
