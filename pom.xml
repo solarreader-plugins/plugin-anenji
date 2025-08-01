@@ -14,21 +14,43 @@
         <maven.compiler.source>${compiler.version}</maven.compiler.source>
         <maven.compiler.target>${compiler.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>de.schnippsche.solarreader.plugins.anenji.Anenji</mainClass>
+        <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
         <!-- Plugin Versions -->
         <spotless.version>2.46.1</spotless.version>
         <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
         <maven.jar.plugin.version>3.4.1</maven.jar.plugin.version>
         <maven.surefire.plugin.version>3.5.3</maven.surefire.plugin.version>
-        <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-        <!-- Dependency Versions -->
-        <solarreader.version>2.0.1</solarreader.version>
+        <maven.resource.plugin>3.3.1</maven.resource.plugin>
         <junit.version>5.12.2</junit.version>
         <mockito.version>5.18.0</mockito.version>
+        <!-- dependencies -->
+        <solarreader.version>2.0.1</solarreader.version>
+        <!-- main class -->
+        <mainClass>de.schnippsche.solarreader.plugins.anenji.Anenji</mainClass>
+        <!-- Project Metadata -->
+        <software.main.class>${mainClass}</software.main.class>
+        <software.name>Anenji</software.name>
+        <software.version>${project.version}</software.version>
+        <software.build.date>${maven.build.timestamp}</software.build.date>
+        <software.author>Stefan Töngi</software.author>
+        <software.repository>https://github.com/solarreader-plugins/plugin-anenji</software.repository>
+        <software.icon>anenji.svg</software.icon>
+        <software.support.info>Anenji Inverter</software.support.info>
+        <software.interfaces>NAMED_USB,LISTED_USB,HF2211</software.interfaces>
+        <software.protocol>MODBUS</software.protocol>
+
     </properties>
 
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <artifactId>spotless-maven-plugin</artifactId>
@@ -78,9 +100,9 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
+                            <Main-Class>${mainClass}</Main-Class>
                             <Software-Version>${project.version}</Software-Version>
                             <Software-Build-Date>${maven.build.timestamp}</Software-Build-Date>
-                            <Main-Class>${mainClass}</Main-Class>
                             <Software-Name>Anenji</Software-Name>
                             <Software-Author>Stefan Töngi</Software-Author>
                             <Software-Repository>https://github.com/solarreader-plugins/plugin-anenji
@@ -100,18 +122,13 @@
                 <version>${maven.surefire.plugin.version}</version>
             </plugin>
 
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resource.plugin}</version>
+            </plugin>
+
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.class</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
+
     </build>
 
     <dependencies>
