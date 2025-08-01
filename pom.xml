@@ -101,16 +101,6 @@
                     <archive>
                         <manifestEntries>
                             <Main-Class>${mainClass}</Main-Class>
-                            <Software-Version>${project.version}</Software-Version>
-                            <Software-Build-Date>${maven.build.timestamp}</Software-Build-Date>
-                            <Software-Name>Anenji</Software-Name>
-                            <Software-Author>Stefan Töngi</Software-Author>
-                            <Software-Repository>https://github.com/solarreader-plugins/plugin-anenji
-                            </Software-Repository>
-                            <Software-Icon>anenji.svg</Software-Icon>
-                            <Software-Support-Info>Anenji Inverter</Software-Support-Info>
-                            <Software-Interfaces>NAMED_USB,LISTED_USB,HF2211</Software-Interfaces>
-                            <Software-Protocol>MODBUS</Software-Protocol>
                         </manifestEntries>
                     </archive>
                 </configuration>
